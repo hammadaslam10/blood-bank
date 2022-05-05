@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorManagementTable">
+    <children>
+        <ImageView fitHeight="700.0" fitWidth="620.0" layoutX="-1.0">
+            <image>
+                <Image url="@BACKGROUND2.jpg" />
+            </image>
+        </ImageView>
+      <TableView fx:id="Table" layoutX="-1.0" layoutY="96.0" prefHeight="324.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="NameRow" onEditCommit="#NameRowEdit" prefWidth="114.33332824707031" text="Name" />
+          <TableColumn fx:id="CnicRow" onEditCommit="#CnicRowEdit" prefWidth="114.66667175292969" text="cnic" />
+            <TableColumn fx:id="BloodGrouo" onEditCommit="#BloodGroupEdit" prefWidth="78.33334350585938" text="BloodGroup" />
+            <TableColumn fx:id="AgeRow" onEditCommit="#AgeEdit" prefWidth="58.666656494140625" text="Age" />
+            <TableColumn fx:id="AddressRow" onEditCommit="#AddressEdit" prefWidth="151.6666259765625" text="Address" />
+            <TableColumn fx:id="BottlesToBeDonated" onEditCommit="#BottlesEdit" prefWidth="104.3333740234375" text="Bottles donated" />
+        </columns>
+      </TableView>
+      <TextField fx:id="NameField" layoutX="59.0" layoutY="439.0" promptText="Name" />
+      <TextField fx:id="CnicField" layoutX="59.0" layoutY="475.0" promptText="Cnic" />
+      <TextField fx:id="AgeField" layoutX="59.0" layoutY="508.0" promptText="Age" />
+      <TextField fx:id="AddressField" layoutX="59.0" layoutY="549.0" prefHeight="25.0" prefWidth="149.0" promptText="Address" />
+      <ComboBox fx:id="BloodGroup" layoutX="420.0" layoutY="439.0" prefWidth="150.0" promptText="BloodGroup" />
+      <CheckBox fx:id="FirstBottle" layoutX="408.0" layoutY="525.0" mnemonicParsing="false" onAction="#FirstbottleFunction" text="1 bottle" />
+      <CheckBox fx:id="SecondBottle" layoutX="517.0" layoutY="525.0" mnemonicParsing="false" onAction="#SecondbottleFunction" text="2 bottle" />
+      <Label layoutX="437.0" layoutY="492.0" text="Bottles to be donated" />
+      <Button layoutX="231.0" layoutY="595.0" mnemonicParsing="false" onAction="#AddMethod" text="Add" />
+      <Button layoutX="356.0" layoutY="595.0" mnemonicParsing="false" onAction="#DeleteMethod" text="Delete" />
+    </children>
+</AnchorPane>
